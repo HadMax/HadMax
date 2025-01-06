@@ -1,0 +1,748 @@
+1. Real-Time Event Notifications
+Question: How would you design a system for sending real-time notifications (e.g., booking confirmations or price alerts) to millions of users globally with minimal latency?
+Focus Areas:
+Message queuing (e.g., Kafka, RabbitMQ)
+Push notifications vs. polling
+Pub/Sub systems
+Scalability of notification delivery
+2. Inventory Management System
+Question: Design a system to manage inventory for partners with real-time updates, ensuring the system handles stock synchronization efficiently across multiple locations.
+Focus Areas:
+Distributed locking
+Idempotency
+Event-driven updates
+Handling offline updates
+3. Partner API Rate Limiting
+Question: How would you design a rate-limiting system to ensure fair use of partner APIs while handling bursts of traffic from clients?
+Focus Areas:
+Distributed rate limiting
+Burst handling
+Graceful degradation
+Monitoring usage patterns
+4. Intelligent Offer Sorting
+Question: How would you design a system to sort and rank offers dynamically based on multiple factors such as price, partner reliability, and user preferences?
+Focus Areas:
+Ranking algorithms
+Machine learning integration
+Feature weighting and scoring
+Personalization strategies
+5. Global Search System
+Question: How would you design a search system that supports multi-language queries, handles typos, and delivers results optimized for users in different regions?
+Focus Areas:
+Full-text search engines (e.g., Elasticsearch, Solr)
+Multi-language support
+Geo-aware search
+Search result caching
+6. Offline Booking Capability
+Question: How would you design a system to allow users to make bookings offline, syncing their actions with the server once they regain connectivity?
+Focus Areas:
+Offline-first architecture
+Conflict resolution strategies
+Data synchronization
+Local storage mechanisms
+7. Multi-Currency Price Handling
+Question: Design a system to support multi-currency pricing for global users, considering exchange rate updates and currency rounding rules.
+Focus Areas:
+Currency conversion APIs
+Caching exchange rates
+Consistency in pricing
+Localized user experience
+8. Audit Log System
+Question: How would you implement a tamper-proof audit log system for tracking all critical user and system actions?
+Focus Areas:
+Write-once storage
+Immutable event logs
+Digital signatures for logs
+Access control
+9. Real-Time Fraud Prevention
+Question: How would you design a system to detect and block fraudulent activities (e.g., duplicate bookings or suspicious behavior) in real-time?
+Focus Areas:
+Streaming analytics (e.g., Apache Flink, Spark Streaming)
+Rule-based vs. ML-based detection
+Scalability of fraud detection
+False positive reduction
+10. Failover and Disaster Recovery
+Question: How would you design a failover mechanism for critical booking operations to ensure high availability in the event of data center outages?
+Focus Areas:
+Active-active vs. active-passive setups
+Data replication
+Failover testing
+RTO (Recovery Time Objective) and RPO (Recovery Point Objective)
+11. Partner Service Health Monitoring
+Question: How would you design a monitoring system to assess the health and performance of partner services and notify you of anomalies?
+Focus Areas:
+Service-level agreements (SLAs)
+Health checks and status pages
+Real-time alerting
+Historical performance analysis
+12. Handling Seasonal Traffic Spikes
+Question: Design a system to handle significant traffic spikes during holiday seasons or flash sales without degrading user experience.
+Focus Areas:
+Autoscaling (e.g., Kubernetes, AWS Autoscaling Groups)
+Queueing systems for managing surge traffic
+Load balancing strategies
+Resource pre-provisioning
+13. Consistent Pricing for Long Sessions
+Question: How would you ensure consistent pricing for users who start their session and complete their booking hours later, during which prices may have changed?
+Focus Areas:
+Price locking mechanisms
+Expiry policies
+Transparent user communication
+Handling price changes gracefully
+14. User Behavior Analytics
+Question: How would you design a system to collect and analyze user behavior data to improve the user experience and increase conversions?
+Focus Areas:
+Event tracking systems (e.g., Segment, Mixpanel)
+Real-time vs. batch data processing
+Privacy-compliant data handling
+Integration with recommendation engines
+15. Conflict Resolution in Distributed Systems
+Question: How would you handle conflicts that arise from simultaneous updates to a shared resource (e.g., two users trying to book the same hotel room)?
+Focus Areas:
+Conflict-free replicated data types (CRDTs)
+Distributed transactions
+Optimistic vs. pessimistic locking
+Versioning and merge strategies
+These questions focus on advanced problem-solving and system design skills, providing a holistic approach to backend engineering interviews. Let me know if you'd like deeper explanations or answers for any specific question!
+
+
+
+
+
+
+You said:
+more
+ChatGPT said:
+ChatGPT
+Advanced Backend Engineering Interview Questions (Extended)
+16. Handling Rate Disparities
+Question: Design a system that aggregates and normalizes pricing data from multiple third-party services, each providing rates in varying formats and intervals.
+Focus Areas:
+Data normalization
+Handling inconsistent data formats
+Deduplication of offers
+Reconciliation and accuracy checks
+17. Rolling Updates with Minimum Downtime
+Question: How would you implement rolling updates for a critical service, ensuring that ongoing transactions are not interrupted?
+Focus Areas:
+Blue-green deployments
+Canary releases
+Version compatibility
+State management during updates
+18. Recommendation System for Bookings
+Question: Design a recommendation engine to suggest hotels, flights, or activities to users based on their browsing history and preferences.
+Focus Areas:
+Collaborative filtering
+Content-based recommendations
+Real-time updates to recommendations
+Personalization at scale
+19. Latency Reduction for Global Users
+Question: How would you reduce latency for users accessing your service from different parts of the world?
+Focus Areas:
+Geographically distributed servers
+Content Delivery Networks (CDNs)
+Optimized DNS routing
+Compression and caching techniques
+20. Overbooking Prevention
+Question: How would you design a system to prevent overbooking of limited resources like flights or hotel rooms, especially in a distributed environment?
+Focus Areas:
+Distributed locks
+Eventual consistency trade-offs
+Optimistic vs. pessimistic reservations
+Real-time stock updates
+21. API Version Deprecation Strategy
+Question: How would you design an API deprecation strategy that minimizes disruptions for your users and partners?
+Focus Areas:
+Version lifecycle management
+Client communication and migration plans
+Feature flags for gradual rollout
+Monitoring API usage
+22. Cross-Service Data Correlation
+Question: Design a system to correlate data from multiple microservices (e.g., bookings, payments, and reviews) to generate unified reports.
+Focus Areas:
+Data aggregation pipelines
+Distributed tracing
+Schema evolution
+Data freshness vs. performance
+23. Predictive Autoscaling
+Question: How would you implement a predictive autoscaling mechanism for your backend services to handle fluctuating traffic patterns?
+Focus Areas:
+Metrics collection and analysis
+Predictive models (e.g., ML-based forecasting)
+Proactive resource allocation
+Handling false positives in scaling
+24. Circuit Breaker with Graceful Recovery
+Question: Design a circuit breaker pattern implementation to handle unreliable third-party integrations while maintaining a good user experience.
+Focus Areas:
+Circuit breaker states (open, closed, half-open)
+Timeout and retry mechanisms
+Fallback responses
+Recovery monitoring
+25. API Monetization Strategy
+Question: How would you design a monetization strategy for exposing third-party APIs, ensuring fair billing and usage tracking?
+Focus Areas:
+Rate and usage tracking
+Tiered pricing models
+API analytics dashboards
+Billing integration
+26. Handling Long-Running Requests
+Question: How would you design a system to handle long-running requests (e.g., processing large datasets or booking workflows) without timing out?
+Focus Areas:
+Asynchronous request processing
+Task queues (e.g., Celery, Resque)
+Progress tracking for users
+Webhooks for completion notifications
+27. Multi-Region Data Replication
+Question: How would you design a multi-region database replication strategy to ensure low latency and high availability?
+Focus Areas:
+Read and write optimization
+Conflict resolution
+Region-aware queries
+Data sovereignty considerations
+28. Feature Toggle System
+Question: How would you implement a feature toggle system to enable or disable features dynamically across multiple microservices?
+Focus Areas:
+Centralized feature management
+Gradual rollouts
+Monitoring feature adoption
+Rollback capabilities
+29. GDPR and Compliance Handling
+Question: How would you design a system to ensure compliance with GDPR or similar data protection regulations?
+Focus Areas:
+Data minimization and pseudonymization
+User data deletion and export
+Consent management
+Audit trails
+30. Debugging in a Microservices Environment
+Question: How would you design an efficient debugging and monitoring system for a highly distributed microservices architecture?
+Focus Areas:
+Distributed tracing (e.g., Jaeger, OpenTelemetry)
+Centralized logging (e.g., ELK stack)
+Real-time metrics (e.g., Prometheus, Grafana)
+Correlation IDs for requests
+31. Data Partitioning for High Throughput
+Question: How would you partition user data in a database to handle billions of records efficiently?
+Focus Areas:
+Sharding strategies (range-based, hash-based)
+Hotspot prevention
+Rebalancing partitions
+Query optimization
+32. Dynamic Pricing Engine
+Question: Design a dynamic pricing engine for a third-party booking service, considering supply, demand, and partner preferences.
+Focus Areas:
+Real-time price calculation
+Machine learning models for prediction
+Handling price overrides
+User-facing latency optimization
+33. Hybrid Cloud Deployment
+Question: How would you design a deployment strategy to run workloads across on-premises infrastructure and the public cloud?
+Focus Areas:
+Network connectivity and latency
+Unified monitoring and logging
+Data synchronization
+Cost management
+34. Request Prioritization
+Question: How would you design a request prioritization mechanism for API traffic to ensure critical requests are processed first?
+Focus Areas:
+Priority queues
+Traffic shaping
+Service-level differentiation
+Rate-limiting by priority
+35. Multi-Layered Cache Design
+Question: How would you design a multi-layered caching system for a high-throughput API service to optimize performance?
+Focus Areas:
+In-memory caching (e.g., Redis)
+Edge caching (e.g., CDN)
+Cache invalidation strategies
+Cache hit/miss monitoring
+36. Real-Time Metrics Dashboard
+Question: Design a real-time metrics dashboard to display live system health and key performance indicators (KPIs).
+Focus Areas:
+Streaming data pipelines
+Aggregation and visualization
+Alerting thresholds
+Dashboard customization
+37. Consistency in Distributed Systems
+Question: How would you ensure strong consistency in a distributed system where multiple services update the same data simultaneously?
+Focus Areas:
+Consensus algorithms (e.g., Paxos, Raft)
+Two-phase commit
+Distributed transactions
+Consistency guarantees (e.g., linearizability)
+38. Scaling Search Functionality
+Question: How would you scale a full-text search system to support millions of concurrent queries across multiple regions?
+Focus Areas:
+Distributed search architecture
+Index sharding and replication
+Query optimization
+Caching frequently queried terms
+39. Real-Time User Session Management
+Question: Design a system to manage real-time user sessions with state synchronization across multiple servers.
+Focus Areas:
+Session storage options (e.g., Redis, DynamoDB)
+Sticky sessions vs. stateless approaches
+Real-time synchronization
+Session expiration handling
+40. Business Continuity Planning
+Question: How would you design a system to ensure business continuity during major outages, including failover strategies and data recovery?
+Focus Areas:
+Backup and restore mechanisms
+Disaster recovery drills
+Global load balancing
+Recovery point and time objectives (RPO/RTO)
+Let me know if you'd like in-depth exploration or solutions for any of these!
+
+
+
+
+
+
+You said:
+more
+ChatGPT said:
+ChatGPT
+More Advanced Backend Engineering Interview Questions
+41. High-Availability Multi-Region APIs
+Question: Design a multi-region API system that ensures high availability and low latency, even during regional outages.
+Focus Areas:
+DNS-based global load balancing
+Active-active vs. active-passive replication
+Data synchronization across regions
+Failover mechanisms
+42. Real-Time Analytics
+Question: How would you design a system for real-time analytics on user behavior and system events?
+Focus Areas:
+Stream processing (e.g., Apache Kafka, Apache Flink)
+Aggregation windows
+Scalability of processing pipelines
+Data visualization in near real-time
+43. Graceful Degradation
+Question: How would you design a system to degrade gracefully during partial failures, ensuring critical functionality remains operational?
+Focus Areas:
+Circuit breakers and fallbacks
+Dependency prioritization
+Feature flagging during outages
+User notification strategies
+44. Optimizing Database Schema for Growth
+Question: How would you optimize a relational database schema to handle the growth of data while maintaining query performance?
+Focus Areas:
+Indexing strategies
+Partitioning large tables
+Denormalization trade-offs
+Query execution plan optimization
+45. Handling Third-Party Downtime
+Question: Design a system that continues to operate effectively when dependent third-party APIs experience downtime or latency issues.
+Focus Areas:
+Caching fallback responses
+Rate limiting to prevent cascading failures
+Alternative data sources
+Timeout and retry strategies
+46. Secure Data Handling in Transit
+Question: How would you design a secure data transmission pipeline between clients and servers, and between microservices?
+Focus Areas:
+TLS and mTLS encryption
+API authentication (OAuth2, JWT)
+Secure storage of keys and certificates
+Protection against man-in-the-middle attacks
+47. Data Reconciliation in Distributed Systems
+Question: How would you design a system to reconcile data discrepancies across multiple services or data stores?
+Focus Areas:
+Periodic consistency checks
+Event sourcing for replaying data
+Reconciliation algorithms
+Audit logs for tracking changes
+48. Efficient Logging at Scale
+Question: Design a logging system for a high-throughput backend service that minimizes performance impact and supports efficient querying.
+Focus Areas:
+Log aggregation systems (e.g., Fluentd, Logstash)
+Log compression and storage
+Queryable logging backends (e.g., Elasticsearch)
+Structured vs. unstructured logging
+49. Event-Driven Architecture Design
+Question: How would you design an event-driven architecture to support loosely coupled services in a booking platform?
+Focus Areas:
+Event producers and consumers
+Event brokers (e.g., RabbitMQ, Kafka)
+Event schema design
+Message ordering and idempotency
+50. Bulk Import/Export of Data
+Question: How would you design a bulk data import/export feature for a booking platform, handling millions of records efficiently?
+Focus Areas:
+Batch processing
+Parallelism for large datasets
+Error handling and retries
+Monitoring progress and failures
+51. Testing Strategies for Microservices
+Question: What testing strategies would you implement for a microservices architecture to ensure reliability?
+Focus Areas:
+Unit, integration, and end-to-end testing
+Service contract testing
+Chaos engineering for resilience
+Test data management
+52. Handling Dynamic User Permissions
+Question: How would you design a system to manage dynamic and hierarchical user permissions for accessing resources?
+Focus Areas:
+Role-based access control (RBAC)
+Attribute-based access control (ABAC)
+Permission caching
+Auditing access attempts
+53. User Session Resiliency
+Question: How would you ensure that user sessions remain consistent and available across multiple instances of your backend services?
+Focus Areas:
+Distributed session storage (e.g., Redis, DynamoDB)
+Stateless session tokens (e.g., JWT)
+Session replication and failover
+Secure session expiration handling
+54. Handling Data Backfills
+Question: How would you design a system to perform large-scale backfills or re-computation of data without impacting live traffic?
+Focus Areas:
+Backfill jobs with throttling
+Shadow tables for data migration
+Rollback plans
+Monitoring job progress and errors
+55. Real-Time Collaborative Editing
+Question: Design a backend system to support real-time collaborative editing, ensuring changes are synchronized across users.
+Focus Areas:
+Operational Transformations (OT) or Conflict-free Replicated Data Types (CRDTs)
+WebSocket or server-sent events
+Conflict resolution
+Latency optimization for synchronization
+56. Scaling Write-Heavy Systems
+Question: How would you design a system to handle millions of writes per second in a distributed database environment?
+Focus Areas:
+Write sharding and partitioning
+Batch writes for efficiency
+Consistency vs. availability trade-offs
+Optimizing database indexes
+57. Cold Start Problem in Serverless
+Question: How would you mitigate the cold start problem in a serverless architecture to improve response times?
+Focus Areas:
+Pre-warming functions
+Adjusting timeout settings
+Optimizing function deployment sizes
+Persistent connections with warm containers
+58. Designing Retry Logic
+Question: How would you design a retry mechanism for failed requests in a backend system while avoiding request amplification?
+Focus Areas:
+Exponential backoff with jitter
+Dead-letter queues
+Idempotent operations
+Circuit breaker integration
+59. Multi-Tenant Architecture
+Question: How would you design a multi-tenant architecture for a booking platform with shared and isolated resources?
+Focus Areas:
+Tenant-aware resource allocation
+Data partitioning (shared vs. dedicated)
+Performance isolation
+Security and access controls
+60. API Pagination and Sorting
+Question: How would you design pagination and sorting for a high-traffic API, ensuring performance and scalability?
+Focus Areas:
+Cursor-based vs. offset-based pagination
+Index design for efficient sorting
+Consistent ordering in paginated results
+Handling large data sets
+These questions are designed to challenge a candidate's depth of knowledge and practical experience across all aspects of backend engineering. Let me know if you'd like detailed explanations or answers for any!
+
+
+
+
+
+
+You said:
+more
+ChatGPT said:
+ChatGPT
+Even More Advanced Backend Engineering Interview Questions
+61. Implementing Sagas for Distributed Transactions
+Question: How would you implement a saga pattern to manage distributed transactions across multiple services in a booking platform?
+Focus Areas:
+Choreography vs. orchestration
+Compensation logic for rollbacks
+Idempotency in steps
+Handling partial failures
+62. High-Volume Notifications System
+Question: Design a system to send real-time notifications (e.g., email, SMS, push) to millions of users efficiently.
+Focus Areas:
+Queue-based processing
+Rate limiting per channel/provider
+Delivery status tracking
+User notification preferences
+63. Data Privacy in Analytics
+Question: How would you ensure data privacy and anonymization in an analytics system for tracking user behavior?
+Focus Areas:
+Data minimization
+Hashing and tokenization
+Differential privacy techniques
+Compliance with privacy regulations (e.g., GDPR, CCPA)
+64. Real-Time Fraud Detection
+Question: Design a system to detect and mitigate fraud in real-time for a booking platform.
+Focus Areas:
+Behavioral analysis
+Rule-based vs. ML-based detection
+Stream processing for real-time detection
+Alerting and escalation paths
+65. Consistent Hashing for Load Balancing
+Question: How would you implement consistent hashing for load balancing in a distributed system?
+Focus Areas:
+Ring-based hashing
+Node addition/removal with minimal impact
+Partitioning strategies
+Replication for fault tolerance
+66. Optimizing WebSocket Scalability
+Question: How would you scale a WebSocket server to support millions of concurrent connections?
+Focus Areas:
+Connection sharding
+Pub/sub architecture
+Connection lifecycle management
+Horizontal scaling strategies
+67. Data Pipeline Failure Recovery
+Question: How would you design a data pipeline to recover gracefully from failures during data processing?
+Focus Areas:
+Checkpointing
+Retries with exponential backoff
+Dead-letter queues
+State management in streaming systems
+68. Hybrid Relational-NoSQL Data Model
+Question: How would you design a hybrid data model combining relational and NoSQL databases for a booking system?
+Focus Areas:
+Schema design for relational core data
+NoSQL for high-velocity metadata
+Cross-database transactions
+Query optimization across databases
+69. Scaling Event Storage
+Question: How would you design an event storage system to handle billions of events per day in an event-driven architecture?
+Focus Areas:
+Partitioning and indexing strategies
+Write throughput optimization
+Data retention policies
+Query and analytics performance
+70. Security Threat Modeling
+Question: How would you conduct a security threat model for a backend system with sensitive user data?
+Focus Areas:
+Identifying attack vectors
+Mitigation strategies (e.g., encryption, firewalls)
+OWASP top 10 vulnerabilities
+Penetration testing
+71. State Management in Serverless Architectures
+Question: How would you manage state in a serverless application with high concurrency?
+Focus Areas:
+External state storage (e.g., DynamoDB, S3)
+Event sourcing for state recovery
+Stateless design principles
+Performance optimization for state queries
+72. Multi-Language Microservices
+Question: How would you design a system where microservices are written in different programming languages, ensuring interoperability?
+Focus Areas:
+Language-agnostic APIs (e.g., gRPC, REST)
+Common data serialization formats (e.g., JSON, Protobuf)
+Shared infrastructure (e.g., authentication, logging)
+Consistent CI/CD pipelines
+73. Real-Time Conflict Resolution
+Question: How would you resolve conflicts in real-time when two users try to modify the same resource simultaneously?
+Focus Areas:
+Optimistic concurrency control
+Last-write-wins vs. manual resolution
+Version control for resources
+Real-time collaboration feedback
+74. System for Dynamic Feature Experimentation
+Question: Design a system to support A/B testing and feature experimentation across backend services.
+Focus Areas:
+Experiment assignment and tracking
+Metrics collection and analysis
+Rollback for failing experiments
+Dynamic feature flagging
+75. Backend for Data-Heavy Analytics
+Question: How would you design a backend to handle queries on petabytes of analytics data while keeping query latencies low?
+Focus Areas:
+Columnar storage engines (e.g., Apache Parquet)
+Distributed query engines (e.g., Presto, Trino)
+Query caching and indexing
+Data partitioning strategies
+76. Managing Inter-Service Latency
+Question: How would you design a system to monitor and minimize inter-service latency in a microservices architecture?
+Focus Areas:
+Distributed tracing tools (e.g., Jaeger, Zipkin)
+RPC vs. message queues for communication
+Circuit breakers and retries
+Async communication patterns
+77. Designing Idempotent APIs
+Question: How would you ensure idempotency in APIs handling sensitive operations, like payments or bookings?
+Focus Areas:
+Idempotency tokens
+Safe retries and deduplication
+Database locking mechanisms
+Conflict detection
+78. Load Testing Strategies
+Question: How would you design a load testing strategy to ensure your system can handle expected traffic spikes?
+Focus Areas:
+Simulating real-world usage patterns
+Test scenarios for edge cases
+Analyzing bottlenecks from results
+Stress vs. endurance testing
+79. Geo-Distributed Lock Management
+Question: How would you implement distributed locks in a geo-distributed system to ensure data consistency?
+Focus Areas:
+Lease-based locking (e.g., Redis, Zookeeper)
+Lock expiration and renewal
+Latency optimization for lock acquisition
+Handling network partitions
+80. Time-Sensitive Data Aggregation
+Question: Design a system to aggregate and process data within strict time constraints, ensuring accurate results.
+Focus Areas:
+Sliding window aggregation
+Low-latency data ingestion
+Handling late-arriving data
+Parallel processing frameworks
+Let me know if you'd like in-depth solutions or discussions on any of these!
+
+
+
+
+
+
+You said:
+more
+ChatGPT said:
+ChatGPT
+Even More Advanced Backend Engineering Interview Questions
+81. Cross-Data Center Synchronization
+Question: How would you synchronize state between multiple data centers in a system with low tolerance for inconsistency?
+Focus Areas:
+Conflict-free replicated data types (CRDTs)
+Quorum-based consistency
+Multi-leader or leaderless replication
+Trade-offs in consistency vs. availability
+82. Efficient Large File Uploads
+Question: Design a system to allow users to upload large files efficiently, with support for interruptions and resumptions.
+Focus Areas:
+Chunked uploads
+Temporary storage (e.g., object stores like S3)
+Checkpointing for resumable uploads
+Secure file handling
+83. Dynamic Pricing Algorithms
+Question: How would you design a backend system to calculate dynamic pricing for a booking platform based on supply, demand, and other factors?
+Focus Areas:
+Real-time data ingestion and processing
+Predictive algorithms for demand forecasting
+Pricing rules and overrides
+Caching for frequently accessed prices
+84. Data Sharding in SQL Databases
+Question: How would you shard a large relational database while minimizing the impact on query performance and ensuring scalability?
+Focus Areas:
+Shard key selection
+Horizontal vs. vertical sharding
+Rebalancing shards dynamically
+Query routing logic
+85. Secure API Gateway Design
+Question: Design an API gateway for a microservices architecture that ensures security, scalability, and observability.
+Focus Areas:
+Authentication and authorization (e.g., OAuth, JWT)
+Rate limiting and throttling
+Request/response transformation
+Centralized logging and monitoring
+86. Building a Recommendation Engine
+Question: How would you design a backend system to serve personalized recommendations for users?
+Focus Areas:
+Content-based and collaborative filtering
+Real-time user activity tracking
+Precomputing recommendations
+AB testing for recommendation effectiveness
+87. Handling Multi-Tenant SaaS Performance Isolation
+Question: How would you design a multi-tenant SaaS platform ensuring performance isolation between tenants?
+Focus Areas:
+Resource allocation and throttling per tenant
+Database schema design for tenant isolation
+Monitoring tenant usage patterns
+Dynamic scaling for tenant-specific workloads
+88. Designing for Strong Consistency in Distributed Systems
+Question: How would you ensure strong consistency in a distributed database system while maintaining availability?
+Focus Areas:
+Two-phase commit protocol (2PC)
+Paxos/Raft consensus algorithms
+Write quorum and replication strategies
+Impact of network partitions
+89. Handling Delayed Writes in Event-Driven Architectures
+Question: How would you ensure consistency when delayed events arrive in an event-driven architecture?
+Focus Areas:
+Event deduplication
+Idempotent consumers
+Out-of-order event handling
+Event versioning
+90. Implementing Soft Deletes
+Question: How would you design a system to support soft deletes while maintaining query performance and data integrity?
+Focus Areas:
+Logical delete flags
+Query optimization for active records
+Data retention policies
+Archival and restoration processes
+91. Designing Rate-Limited APIs
+Question: How would you implement rate-limiting for APIs, ensuring fairness and avoiding abuse?
+Focus Areas:
+Token bucket or leaky bucket algorithms
+Global vs. user-specific limits
+Handling burst traffic gracefully
+Distributed rate limiting strategies
+92. Efficient Schema Evolution in Databases
+Question: How would you manage schema evolution in a high-traffic database without causing downtime?
+Focus Areas:
+Backward-compatible schema changes
+Blue-green deployments for schema updates
+Indexing for new fields
+Versioned data models
+93. Handling Data Drift in Machine Learning Pipelines
+Question: How would you detect and handle data drift in a machine learning pipeline?
+Focus Areas:
+Monitoring input feature distributions
+Retraining triggers for drift thresholds
+Logging and alerting for anomalies
+Feedback loops for dynamic updates
+94. Real-Time Chat System Backend
+Question: Design a backend for a real-time chat application that supports millions of concurrent users.
+Focus Areas:
+WebSockets or long-polling for real-time communication
+Message delivery guarantees (e.g., at-least-once, exactly-once)
+Scalability for high user concurrency
+Offline message storage
+95. Query Optimization for Reporting Systems
+Question: How would you optimize queries in a reporting system with millions of rows and complex joins?
+Focus Areas:
+Materialized views
+Indexing strategies
+Query rewriting and optimization
+Pre-aggregated data tables
+96. Transactional Messaging in Distributed Systems
+Question: How would you ensure that messages in a distributed system are processed exactly once, even in case of failures?
+Focus Areas:
+Distributed transactions and two-phase commits
+Deduplication of messages
+Idempotency of message processing
+Atomic writes with message brokers
+97. API Versioning Strategies
+Question: How would you design a system to support multiple API versions while minimizing disruption to users?
+Focus Areas:
+Versioning in URLs or headers
+Deprecation and sunset policies
+Backward compatibility considerations
+Documentation and developer tooling
+98. Secure Token Management
+Question: How would you securely generate, store, and validate access tokens for API authentication?
+Focus Areas:
+Secure token generation (e.g., JWT, opaque tokens)
+Token storage and expiration policies
+Revocation mechanisms
+Secure transmission and validation
+99. Workflow Orchestration in Microservices
+Question: How would you design a system for orchestrating long-running workflows across multiple microservices?
+Focus Areas:
+Workflow engines (e.g., Temporal, Camunda)
+State transitions and event-driven triggers
+Compensation mechanisms for failed steps
+Monitoring and debugging workflows
+100. Real-Time Traffic Shaping
+Question: How would you design a backend system to shape traffic dynamically, prioritizing critical requests during peak load?
+Focus Areas:
+Priority queues
+Weighted load balancing
+Dynamic rate limiting
+Service degradation strategies
